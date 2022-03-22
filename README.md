@@ -3,10 +3,13 @@ AMPnet PoA Besu deployer script.
 
 ## Requirements
 
-There are two requirements before starting with the deployment steps:
+Make sure you have following installed on your local environment:
+* [Helm](https://helm.sh/docs/)
+* [Helmfile](https://github.com/roboll/helmfile)
+* [Helm Diff plugin](https://github.com/databus23/helm-diff)
 
-* Helm Charts are used to deploy all of the necessary components of the system so make sure you've installed [Helm](https://helm.sh/docs/intro/install/) locally.
-* the script  assumes there's a working [kubectl tool](https://kubernetes.io/docs/reference/kubectl/) installed and properly configured to be connected to your local or remote kubernetes cluster.
+Helm Charts are used to deploy all of the necessary components of the system.
+It is also assumed there's a working [kubectl tool](https://kubernetes.io/docs/reference/kubectl/) installed and properly configured to be connected to your local or remote kubernetes cluster.
 
 Helm version tested an working with this script is v3.4.2. Check the helm version by running
 
