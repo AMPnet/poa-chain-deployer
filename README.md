@@ -46,7 +46,7 @@ The following defines the steps required to deploy your own PoA network.
 
 // TODO
 
-### Step 4: Deploy nginx and expose ports
+### Step 4: Deploy ingress and expose ports
 
 // TODO
 
