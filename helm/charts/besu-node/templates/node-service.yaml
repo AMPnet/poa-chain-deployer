@@ -35,3 +35,18 @@ spec:
       port: {{ .Values.node.besu.p2p.port }}
       targetPort: discovery
       protocol: UDP
+      
+{{- if .Values.nodeFlags.privacy }}          
+    - name: tessera
+      port: {{ .Values.node.tessera.port }}
+      targetPort: tessera
+      protocol: TCP
+    - name: tessera-tp
+      port: {{ .Values.node.tessera.tpport }}
+      targetPort: tessera-tp
+      protocol: TCP
+    - name: tessera-q2t
+      port: {{ .Values.node.tessera.q2tport }}
+      targetPort: tessera-q2t
+      protocol: TCP
+{{- end }}

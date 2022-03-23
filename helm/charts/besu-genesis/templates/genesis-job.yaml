@@ -181,10 +181,8 @@ spec:
                 echo $f
                 kubectl delete configmap besu-node-validator-${f}-address --namespace {{ .Release.Namespace }}
               done
-
               echo "Deleting node-enodes configmap in k8s ..."
               kubectl delete configmap --namespace {{ .Release.Namespace }} besu-node-enodes
-
               echo "Completed ..."
 
 

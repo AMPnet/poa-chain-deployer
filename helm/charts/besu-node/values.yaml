@@ -4,6 +4,10 @@ image:
     repository: hyperledger/besu
     tag: latest
     pullPolicy: IfNotPresent
+  tessera:
+    repository: quorumengineering/tessera
+    tag: latest
+    pullPolicy: IfNotPresent
   hooks:
     repository: consensys/quorum-k8s-hooks
     tag: latest
@@ -80,6 +84,11 @@ node:
       port: 9091
       interval: 15
       prometheusJob: "besu"
+    privacy:
+      url: "http://localhost:9101"
+      pubkeysPath: "/tessera"
+      pubkeyFile: "/tessera/tm.pub"
+      onchainGroupsEnabled: false
     permissions:
       enabled: false
       nodes:
@@ -91,6 +100,22 @@ node:
       accounts:
         enabled: false
         allowlist: ["0x0000000000000000000000000000000000000009"]
+
+  tessera:
+    resources:
+      cpuLimit: 0.7
+      cpuRequest: 0.5
+      memLimit: "2G"
+      memRequest: "1G"
+    tmkey: ""
+    tmpub: ""
+    password: ""
+    dataPath: "/data/tessera"
+    keysPath: "/keys"
+    port: 9000
+    tpport: 9080
+    q2tport: 9101
+
 nodeSelector: {}
 tolerations: []
 affinity: {}
