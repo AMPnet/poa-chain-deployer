@@ -199,8 +199,8 @@ spec:
                 fi
               }
 
-              delete_node_from_enodes_configmap
-              delete_node_from_tessera_peers_configmap
+              #delete_node_from_enodes_configmap
+              #delete_node_from_tessera_peers_configmap
 
             {{- if .Values.nodeFlags.removeKeysOnDeletion }}       
 

@@ -25,7 +25,7 @@ blockscout: # cpu dependent
   postgres_user: postgres
   network: quorum
   subnetwork: consensys
-  chain_id: 1337
+  chain_id: 1984
   coin: eth
   ethereum_jsonrpc_variant: besu
   ethereum_jsonrpc_transport: http

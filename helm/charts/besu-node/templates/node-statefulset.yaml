@@ -125,7 +125,7 @@ spec:
   replicas: 1
   podManagementPolicy: OrderedReady
   updateStrategy:
-    type: RollingUpdate
+    type: RollingUpdate 
   selector:
     matchLabels:
       app: {{ template "besu-node.fullname" . }}
